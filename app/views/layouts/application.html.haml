@@ -1,0 +1,22 @@
+!!!
+%html
+%head
+  %title AngularTodo
+  = stylesheet_link_tag "application", media: "all"
+  = javascript_include_tag "application"
+  = csrf_meta_tags
+
+%body{ 'ng-app' => 'TodoApp', 'ng-controller' => 'ApplicationController' }
+  .row
+    .small-12.columns
+      .panel
+        %h3 Add a Todo
+        %p Name:
+        %input{ type: 'text', 'ng-model' => 'ntodo.name' }
+        %p Body:
+        %textarea{ 'ng-model' => 'ntodo.body' }
+        %button.button{ 'ng-click' => 'addTodo()' } Add
+
+    %li{ 'ng-repeat' => 'todo in todos', 'ng-class' => 'isCompleted(todo)' }
+      %input{ type: 'checkbox', 'ng-model' => 'todo.completed' }
+      {{todo.name}}
