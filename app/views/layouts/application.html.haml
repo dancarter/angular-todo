@@ -7,7 +7,7 @@
   = csrf_meta_tags
 
 %body{ 'ng-app' => 'TodoApp', 'ng-controller' => 'ApplicationController' }
-  .row{ 'ng-controller' => 'TodosController' }
+  .row
     .small-12.columns
       .panel{ 'ng-controller' => 'TodosFormController' }
         %h3 Add a Todo
