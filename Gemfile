@@ -11,9 +11,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'haml-rails'
 gem 'angularjs-rails'
 gem 'foundation-rails'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :development do
   gem 'pry-rails'
+  gem 'pry-byebug'
   gem 'spring'
   gem 'quiet_assets'
 end

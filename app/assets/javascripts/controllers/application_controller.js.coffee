@@ -1,10 +1,3 @@
-@ApplicationController = ($scope) ->
-  $scope.todos = [
-    { name: 'Test1', completed: false },
-    { name: 'Test2', completed: true },
-    { name: 'Test3', completed: false }
-  ]
+@ApplicationController = ($scope, Todo) ->
 
-  $scope.addTodo = ->
-    $scope.todos.push $scope.ntodo
-    $scope.ntodo = []
+  $scope.todos = Todo.query()
