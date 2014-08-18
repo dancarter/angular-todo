@@ -5,5 +5,5 @@
   $scope.addTodo = ->
     success = ->
       $scope.todos.push $scope.todo
-      $scope.todo = new Todo()
+      $scope.ntodo = new Todo()
     $scope.todo.$save({}, success)
